@@ -46,6 +46,7 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
     @*<header>
@@ -124,30 +125,16 @@
             </div>
             <!-- end hide-mobile -->
             <div class="show-mobile">
-                <div class="languages">
-                    <ul>
-                        <li><a href="#">en</a></li>
-                        <li><a href="#">ru</a></li>
-                    </ul>
-                </div>
-                <!-- end languages -->
                 <div class="site-menu">
                     <ul>
+
+                        <li><a href="services.html">Servicios</a></li>
+                        <li><a href="projects.html">Planes</a></li>
+                        <li><a href="news.html">Oficinas</a></li>
+                        <li><a href="contact.html">Salones</a></li>
                         <li>
-                            <a href="#">Consto</a><i class="lni lni-chevron-down-circle"></i>
-                            <ul>
-                                <li><a href="about-company.html">About Company</a></li>
-                                <li><a href="core-values.html">Core Values</a></li>
-                                <li><a href="leadership.html">Leadership</a></li>
-                                <li><a href="our-history.html">Our History</a></li>
-                                <li><a href="offices.html">Offices</a></li>
-                                <li><a href="certificates.html">Certificates</a></li>
-                            </ul>
+                            <a href="#">Nosotros</a>
                         </li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <!-- end site-menu -->
@@ -162,35 +149,20 @@
         <div class="container">
             <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Image"></a> </div>
             <!-- end logo -->
-            <div class="languages">
-                <ul>
-                    <li><a href="#">en</a></li>
-                    <li><a href="#">ru</a></li>
-                </ul>
-            </div>
-            <!-- end languages -->
             <div class="site-menu">
                 <ul>
+
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="projects.html">Planes</a></li>
+                    <li><a href="news.html">Oficinas</a></li>
+                    <li><a href="contact.html">Salones</a></li>
                     <li>
-                        <a href="#">Consto</a>
-                        <ul>
-                            <li><a href="about-company.html">About Company</a></li>
-                            <li><a href="core-values.html">Core Values</a></li>
-                            <li><a href="leadership.html">Leadership</a></li>
-                            <li><a href="our-history.html">Our History</a></li>
-                            <li><a href="offices.html">Offices</a></li>
-                            <li><a href="certificates.html">Certificates</a></li>
-                        </ul>
+                        <a href="#">Nosotros</a>
                     </li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <!-- end site-menu -->
-            <div class="search"> <i class="lni lni-search-alt"></i> </div>
-            <!-- end search -->
+          
 
             <div class="hamburger">
                 <div id="hamburger"> <span></span> <span></span> <span></span> </div>
@@ -198,7 +170,6 @@
             </div>
             <!-- end hamburger -->
             <!-- end hamburher -->
-            <a href="#sales-specialist-form" class="navbar-button" data-fancybox><i class="lni lni-mobile"></i> <span>SALES SPECIALIST</span></a>
         </div>
         <!-- end container -->
     </nav>
@@ -234,6 +205,24 @@
                         <!-- end inner -->
                     </div>
                     <!-- end swiper-slide -->
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <h2>Mock <b>Living</b> Environment</h2>
+                            <p>We building ambientic living spaces for families</p>
+                            <a href="#">DISCOVER CONSTO <i class="lni lni-arrow-right"></i></a>
+                        </div>
+                        <!-- end inner -->
+                    </div>
+                    <!-- end swiper-slide -->
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <h2>Mock <b>Living</b> Environment</h2>
+                            <p>We building ambientic living spaces for families</p>
+                            <a href="#">DISCOVER CONSTO <i class="lni lni-arrow-right"></i></a>
+                        </div>
+                        <!-- end inner -->
+                    </div>
+                    <!-- end swiper-slide -->
                 </div>
                 <!-- end swiper-wrapper -->
                 <div class="controls">
@@ -251,20 +240,26 @@
             <div class="swiper-container slider-main">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="slide-image" data-background="images/slide01.jpg"></div>
+                        <div class="slide-image" data-background="/images/img1.png"></div>
                     </div>
                     <!-- end swiper-slide -->
                     <div class="swiper-slide">
-                        <div class="slide-image" data-background="images/slide02.jpg"></div>
+                        <div class="slide-image" data-background="/images/img2.png"></div>
                     </div>
                     <!-- end swiper-slide -->
                     <div class="swiper-slide">
-                        <div class="slide-image" data-background="images/slide03.jpg"></div>
+                        <div class="slide-image" data-background="/images/img3.png"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-image" data-background="/images/img4.png"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-image" data-background="/images/img5.png"></div>
                     </div>
                     <!-- end swiper-slide -->
                 </div>
                 <!-- end swiper-wrapper -->
-                <div class="header-box"> <b>27</b> <small>YEARS OF EXPERIENCE</small> </div>
+                @*<div class="header-box"> <b>27</b> <small>YEARS OF EXPERIENCE</small> </div>*@
                 <!-- end header-box -->
             </div>
             <!-- end slider-main -->
@@ -272,16 +267,17 @@
         <!-- end container -->
     </header>
     <!-- end slider -->
-    <div class="section-note">This section contains your estimated account balance from the legacy <u>Constro platform</u>, cumulated with your sales</div>
-    <!-- end section-note -->
+   
     <section class="content-section">
+        <div class="section-title">
+            <h2>Beneficios</h2>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="icon-content">
                         <figure><img src="images/icon01.png" alt="Image"></figure>
-                        <h3>We plan with sensetive</h3>
-                        <small>The awards for design, creativity and innovation on the Internet</small> <a href="#">+</a>
+                        <h3>Aumento de productividad</h3>
                     </div>
                     <!-- end icon-content -->
                 </div>
@@ -289,8 +285,8 @@
                 <div class="col-lg-4">
                     <div class="icon-content">
                         <figure><img src="images/icon02.png" alt="Image"></figure>
-                        <h3>For futuristic buildings</h3>
-                        <small>Twenty spring of in esteem spirit likely estate continue new building</small> <a href="#">+</a>
+                        <h3>Nuevos Clientes</h3>
+                        @*<small>Twenty spring of in esteem spirit likely estate continue new building</small> <a href="#">+</a>*@
                     </div>
                     <!-- end icon-content -->
                 </div>
@@ -298,8 +294,35 @@
                 <div class="col-lg-4">
                     <div class="icon-content">
                         <figure><img src="images/icon03.png" alt="Image"></figure>
-                        <h3>Make living beautiful</h3>
-                        <small>Sympathize it projection ye insipidity celebrated our pianoforte</small> <a href="#">+</a>
+                        <h3>Expandir red de contactos</h3>
+
+                    </div>
+                    <!-- end icon-content -->
+                </div>
+                <!-- end col-4 -->
+                <div class="col-lg-4">
+                    <div class="icon-content">
+                        <figure><img src="images/icon04.png" alt="Image"></figure>
+                        <h3>Acceso a nuevo segmento mercado</h3>
+
+                    </div>
+                    <!-- end icon-content -->
+                </div>
+                <!-- end col-4 -->
+                <div class="col-lg-4">
+                    <div class="icon-content">
+                        <figure><img src="images/icon05.png" alt="Image"></figure>
+                        <h3>Nuevas oportunidades de negocios</h3>
+
+                    </div>
+                    <!-- end icon-content -->
+                </div>
+                <!-- end col-4 -->
+                <div class="col-lg-4">
+                    <div class="icon-content">
+                        <figure><img src="images/icon05.png" alt="Image"></figure>
+                        <h3>Nuevas fuentes de ingresos</h3>
+
                     </div>
                     <!-- end icon-content -->
                 </div>
@@ -450,142 +473,13 @@
         <!-- end project-slider -->
     </section>
     <!-- end content-section -->
-    <section class="content-section no-spacing">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-12">
-                    <div class="section-title text-left">
-                        <h6>ESTIMATIED PRICE</h6>
-                        <h2>Sectors We Work In</h2>
-                    </div>
-                    <!-- end section-title -->
-                </div>
-                <!-- end col-12 -->
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Commercial</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
-
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Apartments</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
-
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Flats</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
-
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Villas</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
-
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Medical</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
-
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Industrial</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </section>
-    <!-- end content-section -->
-    <section class="content-section calculator">
-        <div class="bg-image" data-background="images/section-bg01.jpg"></div>
-        <!-- end bg-image -->
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-12">
-                    <div class="section-title text-left">
-                        <h6>ESTIMATIED PRICE</h6>
-                        <h2>Mortage Calculator</h2>
-                    </div>
-                    <!-- end section-title -->
-                </div>
-                <!-- end col-12 -->
-                <div class="col-lg-10">
-                    <form class="form">
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <p>How many rooms :</p>
-                                <div class="range-slider">
-                                    <input class="range-slider__range" type="range" value="4" min="0" max="8" step="1">
-                                    <span class="range-slider__value">0</span>
-                                </div>
-                                <!-- edn range-slider -->
-                            </div>
-                            <!-- end form-group -->
-                            <div class="form-group col-md-6">
-                                <p>Number of floor :</p>
-                                <div class="range-slider">
-                                    <input class="range-slider__range" type="range" value="2" min="0" max="12" step="2">
-                                    <span class="range-slider__value">0</span>
-                                </div>
-                                <!-- edn range-slider -->
-                            </div>
-                            <!-- end form-group -->
-                            <div class="form-group col-lg-4 col-md-6">
-                                <p>Energy Type :</p>
-                                <select>
-                                    <option>Bank of America</option>
-                                </select>
-                            </div>
-                            <!-- end form-group -->
-
-                            <div class="form-group col-lg-4 col-md-6">
-                                <p>Bathroom :</p>
-                                <select>
-                                    <option>Bank of America</option>
-                                </select>
-                            </div>
-                            <!-- end form-group -->
-
-                            <div class="form-group col-lg-4 col-md-12">
-                                <p>Terrace :</p>
-                                <div class="yes-no">
-                                    <input type="radio" name="rdo" id="yes" checked />
-                                    <input type="radio" name="rdo" id="no" />
-                                    <div class="switch">
-                                        <label for="yes">Yes</label>
-                                        <label for="no">No</label>
-                                        <span></span>
-                                    </div>
-                                </div>
-                                <!-- end yes-no -->
-                            </div>
-                            <!-- end form-group -->
-                            <div class="form-group col-12">
-                                <p>Building Materials</p>
-                                <input type="checkbox" id="one" checked>
-                                <label class="custom-checkbox" for="one"> Cellular Concrete </label>
-                                <input type="checkbox" id="two">
-                                <label class="custom-checkbox" for="two"> Ventilated Brick </label>
-                                <input type="checkbox" id="three">
-                                <label class="custom-checkbox" for="three"> Wood </label>
-                                <input type="checkbox" id="four">
-                                <label class="custom-checkbox" for="four"> Prefabricated </label>
-                            </div>
-                            <!-- end form-group -->
-                            <div class="form-group col-12">
-                                <div class="info-box"> <i class="lni lni-checkmark-circle"></i> Explore Cheatsheet to Start Using With Your Projects. </div>
-                                <!-- end info-box -->
-                                <div class="price-box"> <small>Estimated Price :</small> <span>$ 67.800</span> </div>
-                                <!-- end price-box -->
-                            </div>
-                            <!-- end form-group -->
-                        </div>
-                        <!-- end form row -->
-                    </form>
-                    <!-- end mortgage-form -->
-                </div>
-                <!-- end col-9 -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </section>
-    <!-- end content-section -->
     <section class="content-section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h6>FRIEND SALES TEAM</h6>
-                        <h2>Sales Representives</h2>
+                     
+                        <h2>Planes</h2>
                     </div>
                     <!-- end section-title -->
                 </div>
@@ -594,88 +488,113 @@
             <!-- end row -->
             <div class="row no-gutters">
                 <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team01.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Jane O'neil</h6>
-                            <small>Chief Financial Offer</small> <b>+ 850 955 26 84</b>
-                            <ul>
-                                <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="#"><i class="lni lni-instagram-original"></i></a></li>
-                            </ul>
+                    <div class="card text-white bg-warning mb-3" >
+                        <div class="card-header">
+                           Oficinas Privadas
                         </div>
-                        <!-- end infos -->
+                        <ul class="list-group list-group-flush d-flex flex-column align-content-center">
+                            <li class="list-group-item text-dark text-center">
+                                Oficina 7.2 mts2.
+                                <p>USD $350 mensuales</p>
+                                <a href="#" class=" btn-outline-primary">Reservar</a>
+                            </li>
+                            <li class="list-group-item text-dark text-center">
+                                Oficina 8.0 mts2.
+                                <p>USD $400 mensuales</p>
+                                <a href="#" class="btn-outline-primary">Reservar</a>
+                            </li>
+                            <li class="list-group-item text-dark text-center">
+                                Oficina 8.5 mts2.
+                                <p>USD $425 mensuales</p>
+                                <a href="#" class="btn-outline-primary">Reservar</a>
+                            </li>
+                            <li class="list-group-item text-dark text-center">
+                                Oficina 9.0 mts2.
+                                <p>USD $450 mensuales</p>
+                                <a href="#" class="btn-outline-primary">Reservar</a>
+                            </li>
+                            <li class="list-group-item text-dark text-center">
+                                Oficina 10.0 mts2.
+                                <p>USD $480 mensuales</p>
+                                <a href="#" class="btn-outline-primary">Reservar</a>
+                            </li>
+                            <li class="list-group-item text-dark text-center">
+                                Oficina 11.0 mts2.
+                                <p>USD $520 mensuales</p>
+                                <a href="#" class="btn-outline-primary">Reservar</a>
+                            </li>
+                            <li class="list-group-item text-dark text-center">
+                                Oficina 15.8 mts2.
+                                <p>USD $700 mensuales</p>
+                                <a href="#" class="btn-outline-primary">Reservar</a>
+                            </li>
+
+                        </ul>
                     </div>
-                    <!-- end sales-team -->
+
                 </div>
                 <!-- end col -->
                 <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team02.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Bob Voss</h6>
-                            <small>Chief Financial Offer</small> <b>+ 850 955 26 84</b>
-                            <ul>
-                                <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="#"><i class="lni lni-instagram-original"></i></a></li>
-                            </ul>
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-header">
+                            Espacios Compartidos
                         </div>
-                        <!-- end infos -->
+                        <ul class="list-group list-group-flush d-flex flex-column align-content-center">
+                            <li class="list-group-item text-dark text-center">
+                                Escritorios y puestos
+                                trabajo asignados,
+                                <p>USD $250 mensuales</p>
+                                <a href="#" class=" btn-outline-primary">Reservar</a>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- end sales-team -->
+
                 </div>
                 <!-- end col -->
                 <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team03.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Christina Eden</h6>
-                            <small>Chief Financial Offer</small> <b>+ 850 955 26 84</b>
-                            <ul>
-                                <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="#"><i class="lni lni-instagram-original"></i></a></li>
-                            </ul>
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-header">
+                            Espacios Abiertos
                         </div>
-                        <!-- end infos -->
+                        <ul class="list-group list-group-flush d-flex flex-column align-content-center">
+                            <li class="list-group-item text-dark text-center">
+                                <p>USD $100 mensuales</p>
+                                <a href="#" class=" btn-outline-primary">Reservar</a>
+                                <p>USD $33 semanales</p>
+                                <a href="#" class=" btn-outline-primary">Reservar</a>
+                                <p>USD $7 diarios</p>
+                                <a href="#" class=" btn-outline-primary">Reservar</a>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- end sales-team -->
                 </div>
                 <!-- end col -->
                 <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team04.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Eric Mendes</h6>
-                            <small>Chief Financial Offer</small> <b>+ 850 955 26 84</b>
-                            <ul>
-                                <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="#"><i class="lni lni-instagram-original"></i></a></li>
-                            </ul>
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-header">
+                            Salones Reuniones
                         </div>
-                        <!-- end infos -->
+                        <ul class="list-group list-group-flush d-flex flex-column align-content-center">
+                            <li class="list-group-item text-dark text-center">
+                                <p>USD $25.00 por hora</p>
+                                <a href="#" class=" btn-outline-primary">Reservar</a>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- end sales-team -->
                 </div>
                 <!-- end col -->
                 <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team05.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Marie Sheldon</h6>
-                            <small>Chief Financial Offer</small> <b>+ 850 955 26 84</b>
-                            <ul>
-                                <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="#"><i class="lni lni-instagram-original"></i></a></li>
-                            </ul>
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-header">
+                            Oficina Virtual
                         </div>
-                        <!-- end infos -->
+                        <ul class="list-group list-group-flush d-flex flex-column align-content-center">
+                            <li class="list-group-item text-dark text-center">
+                                <p>USD $60.00 mensuales.</p>
+                                <a href="#" class=" btn-outline-primary">Reservar</a>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- end sales-team -->
                 </div>
                 <!-- end col -->
             </div>
@@ -683,113 +602,7 @@
         </div>
         <!-- end container -->
     </section>
-    <!-- end content-section -->
-    <section class="content-section no-spacing white-space-top" data-background="#f7f6f1">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="video-box">
-                        <a href="videos/video01.mp4" data-fancybox data-width="640" data-height="360" class="play-btn"><i class="lni lni-play"></i></a>
-                        <video src="videos/video01.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                    <!-- end video-box -->
-                </div>
-                <!-- end col-12 -->
-                <div class="col-12">
-                    <div class="testimonials-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="testimonial">
-                                    <p>Consto Construction is one of the best general contractors we've worked with. The entire team tactfully delivered a project of exceptional quality while staying on schedule and under budget. We hope to work with Consto again in the near future!</p>
-                                    <i class="lni lni-quotation"></i>
-                                    <h6>William James</h6>
-                                    <small>Life Touch LLC</small>
-                                </div>
-                                <!-- end testimonial -->
-                            </div>
-                            <!-- end swiper-slide -->
-                            <div class="swiper-slide">
-                                <div class="testimonial">
-                                    <p>Consto was completely respectful of the building and its surroundings - they immediately became part of our team and they know teamwork! They kept the jobsite clean and safe; working with Consto is nothing short of a first class experience!</p>
-                                    <i class="lni lni-quotation"></i>
-                                    <h6>William James</h6>
-                                    <small>Life Touch LLC</small>
-                                </div>
-                                <!-- end testimonial -->
-                            </div>
-                            <!-- end swiper-slide -->
-                            <div class="swiper-slide">
-                                <div class="testimonial">
-                                    <p>Thank you for all of your hard work on our project…I seriously don’t know how you did it but it came together SO WELL. I know we are a particular bunch and want things a certain way but you guys did such an amazing job!</p>
-                                    <i class="lni lni-quotation"></i>
-                                    <h6>William James</h6>
-                                    <small>Life Touch LLC</small>
-                                </div>
-                                <!-- end testimonial -->
-                            </div>
-                            <!-- end swiper-slide -->
-                            <div class="swiper-slide">
-                                <div class="testimonial">
-                                    <p>I was truly impressed with Consto’s quality workmanship and the final product. Consto provided an outstanding team that completed our project on-time and on schedule with no disruption to the staff.</p>
-                                    <i class="lni lni-quotation"></i>
-                                    <h6>William James</h6>
-                                    <small>Life Touch LLC</small>
-                                </div>
-                                <!-- end testimonial -->
-                            </div>
-                            <!-- end swiper-slide -->
-                        </div>
-                        <!-- end swiper-wrapper -->
-                        <div class="controls">
-                            <div class="button-prev"><i class="lni lni-arrow-left"></i></div>
-                            <!-- end button-prev -->
-                            <div class="button-next"><i class="lni lni-arrow-right"></i></div>
-                            <!-- end button-next -->
-                        </div>
-                        <!-- end controls -->
-                    </div>
-                    <!-- end testimonials-slider -->
-                </div>
-                <!-- end col-12 -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </section>
-    <!-- end content-section -->
-    <div class="content-section" data-background="#f7f6f1">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item"> <img src="images/logo01.png" alt="Image"> </figure>
-                </div>
-                <!-- end col-2 -->
-                <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item"> <img src="images/logo02.png" alt="Image"> </figure>
-                </div>
-                <!-- end col-2 -->
-                <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item"> <img src="images/logo03.png" alt="Image"> </figure>
-                </div>
-                <!-- end col-2 -->
-                <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item"> <img src="images/logo04.png" alt="Image"> </figure>
-                </div>
-                <!-- end col-2 -->
-                <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item"> <img src="images/logo05.png" alt="Image"> </figure>
-                </div>
-                <!-- end col-2 -->
-                <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item"> <img src="images/logo06.png" alt="Image"> </figure>
-                </div>
-                <!-- end col-2 -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end content-section -->
+    <!-- end content-section Planes -->
     <section class="content-section">
         <div class="container">
             <div class="row">
@@ -807,7 +620,7 @@
                         <div class="content">
                             <small>29 February, 2020</small>
                             <h3><a href="#">Result of a challenge I participated in as a guest on The Futuristic</a></h3>
-                            <div class="author"> <img src="images/author01.jpg" alt="Image"> <span>by <b>Consto Editor</b></span> </div>
+                            <div class="author"> <img src="~/images/img1.png" alt="Image">   <span>by <b>Consto Editor</b></span> </div>
                             <!-- end author -->
                         </div>
                         <!-- end content -->
@@ -823,7 +636,7 @@
                                 <div class="content">
                                     <small>29 February, 2020</small>
                                     <h3><a href="#">Challenge I participated in as a guest on all font</a></h3>
-                                    <div class="author"> <img src="images/author01.jpg" alt="Image"> <span>by <b>Consto Editor</b></span> </div>
+                                    <div class="author"> <img src="~/images/img2.png" alt="Image"> <span>by <b>Consto Editor</b></span> </div>
                                     <!-- end author -->
                                 </div>
                                 <!-- end content -->
@@ -837,7 +650,7 @@
                                 <div class="content">
                                     <small>29 February, 2020</small>
                                     <h3><a href="#">Participated challenge in as a guest on The Future</a></h3>
-                                    <div class="author"> <img src="images/author01.jpg" alt="Image"> <span>by <b>Consto Editor</b></span> </div>
+                                    <div class="author"> <img src="~/images/img3.png" alt="Image"> <span>by <b>Consto Editor</b></span> </div>
                                     <!-- end author -->
                                 </div>
                                 <!-- end content -->
