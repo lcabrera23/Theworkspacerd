@@ -27,62 +27,29 @@
     <!-- TWITTER META -->
     <meta name="twitter:card" content="summary">
     @*<meta name="twitter:site" content="@consto">
-    <meta name="twitter:creator" content="@consto">*@
+        <meta name="twitter:creator" content="@consto">*@
     <meta name="twitter:title" content="consto">
     <meta name="twitter:description" content="Consto | Industrial Construction Company">
     <meta name="twitter:image" content="http://www.themezinho.net/consto/preview.png">
 
     <!-- FAVICON FILES -->
-    <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
-    <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
-    <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
-    <link href="ico/favicon.png" rel="shortcut icon">
+    <link href="~/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="~/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="~/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="~/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
+    <link href="~/ico/favicon.png" rel="shortcut icon">
 
     <!-- CSS FILES -->
-    <link rel="stylesheet" href="css/lineicons.css">
-    <link rel="stylesheet" href="css/odometer.min.css">
-    <link rel="stylesheet" href="css/fancybox.min.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="~/css/lineicons.css">
+    <link rel="stylesheet" href="~/css/odometer.min.css">
+    <link rel="stylesheet" href="~/css/fancybox.min.css">
+    <link rel="stylesheet" href="~/css/swiper.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
     <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    @*<header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Theworkspacerd.Web</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>*@
-
-
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    @*<footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2021 - Theworkspacerd.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>
-        </footer>*@
+  
     @*<script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
@@ -103,20 +70,24 @@
     <!-- end search-box -->
     <aside class="side-widget">
         <div class="inner">
-            <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Image"></a> </div>
+            <div class="logo"> <a href="index.html"><img src="~/images/logo.png" alt="Image"></a> </div>
             <!-- end logo -->
             <div class="hide-mobile">
-                <p>Extremity direction existence as dashwoods do up. Securing <u>marianne led</u> welcomed offended but offering six raptures. </p>
-                <figure class="gallery"><img src="images/slide02.jpg" alt="Image"><img src="images/slide03.jpg" alt="Image"></figure>
-                <h6 class="widget-title">ADDRESS</h6>
+                <p>
+                    Nuestras salas de juntas privadas ofrecen el contexto perfecto para realizar el intercambio de ideas con los colegas,
+                    impresionar a los clientes y llevar a cabo productivas sesiones de capacitación. Reserve una sala por horas y permita que nuestro
+                    equipo de asistencia en sitio le ayude a que su día se desarrolle sin inconvenientes.
+                </p>
+                <h6 class="widget-title">Dirección</h6>
                 <address class="address">
                     <p>
-                        228 Cardigan Road, Leeds<br>
-                        Geneva Switzerland
+                        Av. Simón Bolivar No.195 Torre Corporativa Bolivar<br />
+                        Local 405. La Esperilla<br />
+                        Santo Domingo, 11108 República Dominicana
                     </p>
-                    <p>+1 (850) 344 0 66 #20</p>
+                    <p><a href="tel:8299544117" class="text-white">+1(829)-9544-117</a></p>
                 </address>
-                <h6 class="widget-title">FOLLOW US</h6>
+                <h6 class="widget-title">Siguenos en nuestras redes</h6>
                 <ul class="social-media">
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">Twitter</a></li>
@@ -128,12 +99,16 @@
                 <div class="site-menu">
                     <ul>
 
-                        <li><a href="services.html">Servicios</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Servicios">Servicios</a></li>
                         <li><a href="projects.html">Planes</a></li>
-                        <li><a href="news.html">Oficinas</a></li>
-                        <li><a href="contact.html">Salones</a></li>
                         <li>
-                            <a href="#">Nosotros</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Nosotros">Nosotros</a>
+                        </li>
+                        <li class="no-border">
+                            <a href="tel:8299544117">
+                                <img src="~/images/telefono.svg" class="svg-telefono" /> +1 (829)-9544-117
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -147,22 +122,25 @@
     <!-- end side-widget -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Image"></a> </div>
+            <div class="logo"> <a asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" alt="Image"></a> </div>
             <!-- end logo -->
             <div class="site-menu">
                 <ul>
-
-                    <li><a href="services.html">Servicios</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Servicios">Servicios</a></li>
                     <li><a href="projects.html">Planes</a></li>
-                    <li><a href="news.html">Oficinas</a></li>
-                    <li><a href="contact.html">Salones</a></li>
                     <li>
-                        <a href="#">Nosotros</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Nosotros">Nosotros</a>
+                    </li>
+                    <li class="no-border">
+                        <a href="tel:8299544117">
+                            <img src="~/images/telefono.svg" class="svg-telefono" /> +1 (829)-9544-117
+                        </a>
                     </li>
                 </ul>
             </div>
             <!-- end site-menu -->
-          
+
 
             <div class="hamburger">
                 <div id="hamburger"> <span></span> <span></span> <span></span> </div>
@@ -174,308 +152,17 @@
         <!-- end container -->
     </nav>
     <!-- end navbar -->
-    <header class="slider white-space-bottom">
-        <div class="container">
-            <div class="swiper-container slider-content">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="inner">
-                            <h2>Oficinas
-                                <b>Privadas</b>  
-                            </h2>
-                            <p>Puedes Rentarlas aqui</p>
-                            <a href="#">Ver Planes <i class="lni lni-arrow-right"></i></a>
-                        </div>
-                        <!-- end inner -->
-                    </div>
-                    <!-- end swiper-slide -->
-                    <div class="swiper-slide">
-                        <div class="inner">
-                            <h2>Espacios <b>Compartidos</b></h2>
-                            <p>Puedes ver los espacios disponibles</p>
-                            <a href="#">Ver espacios <i class="lni lni-arrow-right"></i></a>
-                        </div>
-                        <!-- end inner -->
-                    </div>
-                    <!-- end swiper-slide -->
-                    <div class="swiper-slide">
-                        <div class="inner">
-                            <h2>Espacios <b>Abiertos</b></h2>
-                            <p>Espacios disponibles</p>
-                            <a href="#">Ver planes <i class="lni lni-arrow-right"></i></a>
-                        </div>
-                        <!-- end inner -->
-                    </div>
-                    <!-- end swiper-slide -->
-                    <div class="swiper-slide">
-                        <div class="inner">
-                            <h2>Salón de <b>Reuniones</b></h2>
-                            <p>Pues realizar tus reuniones con un excelente confort</p>
-                            <a href="#">Ver coutas <i class="lni lni-arrow-right"></i></a>
-                        </div>
-                        <!-- end inner -->
-                    </div>
-                    <!-- end swiper-slide -->
-                    <div class="swiper-slide">
-                        <div class="inner">
-                            <h2>Oficina <b>Virtual</b></h2>
-                           
-                            <a href="#">Ver planes <i class="lni lni-arrow-right"></i></a>
-                        </div>
-                        <!-- end inner -->
-                    </div>
-                    <!-- end swiper-slide -->
-                </div>
-                <!-- end swiper-wrapper -->
-                <div class="controls">
-                    <div class="swiper-pagination"></div>
-                    <!-- end swiper-pagination -->
-                    <div class="button-prev"><i class="lni lni-arrow-left"></i></div>
-                    <!-- end button-prev -->
-                    <div class="button-next"><i class="lni lni-arrow-right"></i></div>
-                    <!-- end button-next -->
-                </div>
-                <!-- end controls -->
+    
+        @RenderBody()
 
-            </div>
-            <!-- end slider-content -->
-            <div class="swiper-container slider-main">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="slide-image" data-background="/images/Oficina_privada.jpg"></div>
-                    </div>
-                    <!-- end swiper-slide -->
-                    <div class="swiper-slide">
-                        <div class="slide-image" data-background="/images/espacio_compartido.jpg"></div>
-                    </div>
-                    <!-- end swiper-slide -->
-                    <div class="swiper-slide">
-                        <div class="slide-image" data-background="/images/espacios_abiertos.jpg"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-image" data-background="/images/Salon_Reuniones.jpg"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-image" data-background="/images/virtual.jpg"></div>
-                    </div>
-                    <!-- end swiper-slide -->
-                </div>
-                <!-- end swiper-wrapper -->
-                @*<div class="header-box"> <b>27</b> <small>YEARS OF EXPERIENCE</small> </div>*@
-                <!-- end header-box -->
-            </div>
-            <!-- end slider-main -->
-        </div>
-        <!-- end container -->
-    </header>
-    <!-- end slider -->
-   
-    <section class="content-section">
-        <div class="section-title">
-            <h2>Beneficios</h2>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="icon-content">
-                        <figure><img src="images/aumento_productividad.png" alt="Image"></figure>
-                        <h3>Aumento de productividad</h3>
-                    </div>
-                    <!-- end icon-content -->
-                </div>
-                <!-- end col-4 -->
-                <div class="col-lg-4">
-                    <div class="icon-content">
-                        <figure><img src="images/nuevos_clientes.png" alt="Image"></figure>
-                        <h3>Nuevos Clientes</h3>
-                        @*<small>Twenty spring of in esteem spirit likely estate continue new building</small> <a href="#">+</a>*@
-                    </div>
-                    <!-- end icon-content -->
-                </div>
-                <!-- end col-4 -->
-                <div class="col-lg-4">
-                    <div class="icon-content">
-                        <figure><img src="images/expandir _ed.png" alt="Image"></figure>
-                        <h3>Expandir red de contactos</h3>
-
-                    </div>
-                    <!-- end icon-content -->
-                </div>
-                <!-- end col-4 -->
-                <div class="col-lg-4">
-                    <div class="icon-content">
-                        <figure><img src="images/acceso_mercados.png" alt="Image"></figure>
-                        <h3>Acceso a nuevo segmento mercado</h3>
-
-                    </div>
-                    <!-- end icon-content -->
-                </div>
-                <!-- end col-4 -->
-                <div class="col-lg-4">
-                    <div class="icon-content">
-                        <figure><img src="images/nuevas_oportunidades.png" alt="Image"></figure>
-                        <h3>Nuevas oportunidades de negocios</h3>
-
-                    </div>
-                    <!-- end icon-content -->
-                </div>
-                <!-- end col-4 -->
-                <div class="col-lg-4">
-                    <div class="icon-content">
-                        <figure><img src="images/nueva_ingresos.png" alt="Image"></figure>
-                        <h3>Nuevas fuentes de ingresos</h3>
-
-                    </div>
-                    <!-- end icon-content -->
-                </div>
-                <!-- end col-4 -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </section>
-    <!-- end content-section -->
-    <section class="content-section white-space-bottom" data-background="#f7f6f1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="section-title text-left">
-                        <h6>FRIEND SALES TEAM</h6>
-                        <h2>Projects Completed</h2>
-                    </div>
-                    <!-- end section-title -->
-                </div>
-                <!-- end col-7 -->
-                <div class="col-lg-5">
-                    <p>Our diverse portfolio represents decades of construction experience backed by a passion for quality, outstanding client service industry technologies.</p>
-                </div>
-                <!-- end col-5 -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-        <div class="swiper-container project-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <figure class="project-box">
-                        <a href="#"><img src="images/slide02.jpg" alt="Image"></a>
-                        <figcaption>
-                            <h5>Life Science Center</h5>
-                            <p>The building opened in 2020 and includes more than 120+ flats</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- end swiper-slide -->
-                <div class="swiper-slide">
-                    <figure class="project-box">
-                        <a href="#"><img src="images/slide03.jpg" alt="Image"></a>
-                        <figcaption>
-                            <h5>Life Science Center</h5>
-                            <p>The building opened in 2020 and includes more than 120+ flats</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- end swiper-slide -->
-                <div class="swiper-slide">
-                    <figure class="project-box">
-                        <a href="#"><img src="images/slide01.jpg" alt="Image"></a>
-                        <figcaption>
-                            <h5>Life Science Center</h5>
-                            <p>The building opened in 2020 and includes more than 120+ flats</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- end swiper-slide -->
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
-        <!-- end project-slider -->
-    </section>
-    <!-- end content-section -->
-    <section class="content-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-
-                        <h2>Planes</h2>
-                    </div>
-                    <!-- end section-title -->
-                </div>
-                <!-- end col-12 -->
-            </div>
-            <!-- end row -->
-            <div class="row d-flex justify-content-center">
-                <div class="col-12 col-sm-6 col-md-2">
-                    <div class="recent-news">
-                        <figure> <img src="~/images/Oficina_privada.jpg" alt="Image"> </figure>
-                        <div class="content">
-                            <h3><a href="#">Oficinas Privadas</a></h3>
-                        </div>
-                        <!-- end content -->
-                    </div>
-                    <!-- end recent-news -->
-                </div>
-                <!-- end col-4 -->
-                <div class="col-12  col-sm-6 col-md-2">
-                    <div class="recent-news">
-                        <figure> <img src="~/images/espacio_compartido.jpg" alt="Image"> </figure>
-                        <div class="content">
-                            <h3><a href="#">Espacios Compartidos</a></h3>
-                        </div>
-                        <!-- end content -->
-                    </div>
-                    <!-- end recent-news -->
-                </div>
-                <!-- end col-4 -->
-                <div class="col-12  col-sm-6 col-md-2">
-                    <div class="recent-news">
-                        <figure> <img src="~/images/espacios_abiertos.jpg" alt="Image"> </figure>
-                        <div class="content">
-                            <h3><a href="#">Espacios Abiertos</a></h3>
-                        </div>
-                        <!-- end content -->
-                    </div>
-                    <!-- end recent-news -->
-                </div>
-                <!-- end col-4 -->
-                <div class="col-12  col-sm-6 col-md-2">
-                    <div class="recent-news">
-                        <figure> <img src="~/images/Salon_Reuniones.jpg" alt="Image"> </figure>
-                        <div class="content">
-                            <h3><a href="#">Salón de Reuniones</a></h3>
-                        </div>
-                    </div>
-                    <!-- end recent-news -->
-                </div>
-                <!-- end col-4 -->
-                  <div class="col-12  col-sm-6 col-md-2">
-                    <div class="recent-news">
-                        <figure> <img src="~/images/virtual.jpg" alt="Image"> </figure>
-                        <div class="content">
-                            <h3><a href="#">Oficinas Virtual</a></h3>
-                            <!-- end author -->
-                        </div>
-                        <!-- end content -->
-                    </div>
-                    <!-- end recent-news -->
-                </div>
-                <!-- end col-4 -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </section>
-    <!-- end content-section Planes -->
 
     <footer class="footer">
         <div class="container">
             <div class="row">
-               
+
                 <!-- end col-4 -->
                 <div class="col-lg-4 col-md-6">
-                    <h6 class="widget-title">Direccion</h6>
+                    <h6 class="widget-title">Dirección</h6>
                     <address>
                         <p>
                             Av. Simón Bolivar No.195 Torre Corporativa Bolivar<br>
@@ -487,11 +174,10 @@
                     </address>
                 </div>
                 <!-- end col-4 -->
-               
                 <!-- end col-4 -->
                 <div class="col-12">
                     <div class="footer-bottom">
-                        <span>© 2020 Consto | Industrial Construction Company</span>
+                        <span>© 2021 theworkspacerd | Industrial Construction Company</span>
                         <ul>
                             <li><a href="#">Facebook</a></li>
                             <li><a href="#">Instagram</a></li>
@@ -534,12 +220,12 @@
     </div>
     <!-- end sales-specialist-form -->
     <!-- JS FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/fancybox.min.js"></script>
-    <script src="js/odometer.min.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/swiper.min.js"></script>
+    <script src="~/js/fancybox.min.js"></script>
+    <script src="~/js/odometer.min.js"></script>
+    <script src="~/js/isotope.min.js"></script>
+    <script src="~/js/scripts.js"></script>
 </body>
 </html>

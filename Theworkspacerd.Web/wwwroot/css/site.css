@@ -4,3 +4,31 @@
     box-shadow: 0 30px 30px #eee;
     z-index: 1;
 }
+.container.mt-100 {
+    margin-top: 100px !important;
+}
+.bt-amarillo {
+    border-bottom: 3px solid #feed01;
+}
+.svg-telefono {
+    width: 30px;
+    margin-left: 20px;
+    margin-right: 3px;
+}
+.navbar .site-menu ul .no-border a:hover::before {
+    background: transparent !important;
+}
+.navbar .site-menu ul .no-border a:hover::after {
+    background: transparent !important;
+}
+.no-border a:hover {
+    border: none !important;
+    background: transparent !important;
+}
+@media  screen and (max-width: 800px) {
+    .svg-telefono {
+      
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
