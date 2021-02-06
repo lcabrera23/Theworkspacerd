@@ -1,0 +1,12 @@
+{
+  "oficinas": [
+    "oficina"
+    :
+    {
+      "id": 1,
+      "precio": 350,
+      "espacio": "Oficina 7.2 mts2",
+       "tipo": "mensual"
+    }
+  ]
+}

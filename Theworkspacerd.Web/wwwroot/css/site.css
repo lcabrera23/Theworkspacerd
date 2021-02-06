@@ -1,9 +1,9 @@
-﻿.card:hover {
+﻿/*.card:hover {
     background: #feed01;
     transform: translateY(-20px);
     box-shadow: 0 30px 30px #eee;
     z-index: 1;
-}
+}*/
 .container.mt-100 {
     margin-top: 100px !important;
 }
@@ -25,7 +25,47 @@
     border: none !important;
     background: transparent !important;
 }
-@media  screen and (max-width: 800px) {
+.texto-parrafo {
+    text-align: center;
+    padding: 11px 5px 0;
+    margin-bottom: 0;
+}
+.precio {
+    text-align: center;
+    height: 50px;
+    color: #ff6c00d1;
+    font-weight: 501;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+.text-card {
+    text-align: center;
+    background: #dddddd40;
+    width: 100%;
+    font-size: 12px;
+}
+.card.redondo {
+    border-radius: 20px;
+    border-top: 4px solid #feed01;
+    box-shadow: 5px 10px 8px #88888838;
+}
+.btn-alquiler {
+    display: block;
+    margin: 0 30px;
+}
+.precio-text{font-size:12px;}
+.span {
+    display: block;
+    border: 1px solid #999;
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.cursorPointer{cursor:pointer;}
+@media screen and (max-width: 800px) {
     .svg-telefono {
       
         margin-left: 0;
