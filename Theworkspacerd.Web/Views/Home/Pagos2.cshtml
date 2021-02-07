@@ -1,30 +1,66 @@
-﻿
-<div id="paypal-button-container"></div>
+﻿@model Theworkspacerd.Web.Models.Oficinas
+@using Newtonsoft.Json
 
-<!-- Include the PayPal JavaScript SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+<style>
+    .navbar {
+        background: black;
+    }
+</style>
 
-<script>// Render the PayPal button into #paypal-button-container
+<div class="container mt-100">
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <h2>@Model.oficina</h2>
+        </div>
+        <div class="col-12 col-md-4">
+            @Model.espacio
+        </div>
+        <div class="col-12 col-md-4">
+            @Model.precio
+        </div>
+    </div>
+</div>
+
+
+    <div id="smart-button-container">
+        <div style="text-align: center;">
+            <div id="paypal-button-container"></div>
+        </div>
+    </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AePjO0nreSYyzFxR2_F_Mr9Je_VUXJb2W90Jq7VijgEMEjOJeARE6MO_k63tvJoKeVg7j4T2f_4_1cuo&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+
+      const data = @Html.Raw(JsonConvert.SerializeObject(ViewBag.objecto));
+      const precio = parseInt(data.precio);
+
+
+    function initPayPalButton() {
         paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
 
-            // Set up the transaction
-            createOrder: function(data, actions) {
+            },
+
+            createOrder: function (data, actions) {
                 return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '88.44'
-                        }
-                    }]
+                    purchase_units: [{ "description": `${data.oficina}`, "amount": { "currency_code": "USD", "value": precio } }]
                 });
             },
 
-            // Finalize the transaction
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    // Show a success message to the buyer
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
                     alert('Transaction completed by ' + details.payer.name.given_name + '!');
                 });
+            },
+
+            onError: function (err) {
+                console.log(err);
             }
-
-
-        }).render('#paypal-button-container');</script>
+        }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+    </script>
