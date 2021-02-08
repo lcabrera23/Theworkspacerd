@@ -5,7 +5,7 @@
     z-index: 1;
 }*/
 .container.mt-100 {
-    margin-top: 150px !important;
+    margin-top: 200px !important;
 }
 .bt-amarillo {
     border-bottom: 3px solid #feed01;
@@ -65,6 +65,16 @@
     margin-right: 70px;
 }
 .cursorPointer{cursor:pointer;}
+.navbar{
+    background:#fff;
+}
+.navbar .site-menu ul li a{
+    color:#000;
+    font-size: 22px;
+}
+ .navbar .logo a img {
+     height: 120px;
+ }
 @media screen and (max-width: 800px) {
     .svg-telefono {
       

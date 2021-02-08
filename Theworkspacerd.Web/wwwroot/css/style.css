@@ -205,7 +205,7 @@ a:hover {
   padding-top: 3px; }
   .hamburger span {
     display: block;
-    background: #fff; }
+    background: #000; }
   .hamburger #hamburger {
     position: absolute;
     height: 100%;
@@ -579,7 +579,7 @@ a:hover {
   z-index: 4;
   transition: top ease 1s; }
   .navbar.sticky {
-    background: #0b0b0b; }
+    background: #fff; }
   .navbar.nav-down {
     top: 0; }
   .navbar.nav-up {
