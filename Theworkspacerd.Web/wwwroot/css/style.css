@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*
 
 @Author: Themezinho
@@ -387,7 +387,7 @@ a:hover {
     display: block;
     margin-bottom: 40px; }
     .side-widget .logo img {
-      height: 40px; }
+       }
   .side-widget .show-mobile {
     display: none; }
   .side-widget .hide-mobile {
@@ -590,7 +590,7 @@ a:hover {
       display: block;
       margin: 0; }
       .navbar .logo a img {
-        height: 40px; }
+        }
   .navbar .languages {
     display: inline-block;
     margin: 0 20px; }
