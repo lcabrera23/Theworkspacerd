@@ -239,6 +239,13 @@ namespace Theworkspacerd.Web.Controllers
 
             return View();
         }
+
+        //Esta accion es para guardar los usuarios que desean saber ofertas
+        public IActionResult Boletin()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
