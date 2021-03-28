@@ -75,6 +75,19 @@
  .navbar .logo a img {
      height: 120px;
  }
+.ficon{
+    font-size:3em;
+    margin-right:8px;
+}
+.serviciosUlt {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+    width:100%;
+
+}
 @media screen and (max-width: 800px) {
     .svg-telefono {
       
