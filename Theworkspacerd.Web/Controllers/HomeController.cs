@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Theworkspacerd.Web.Models;
 
@@ -243,6 +244,37 @@ namespace Theworkspacerd.Web.Controllers
         //Esta accion es para guardar los usuarios que desean saber ofertas
         public IActionResult Boletin()
         {
+            return View();
+        }
+
+
+        //Esta accion enviar un correo al comprador y se le da un codigo de al comprador
+        public IActionResult EnviarCorreo()
+        {
+
+            var fromAddress = new MailAddress("luismiguelcabreragarcia@gmail.com", "Hola mundo 2");
+            var toAddress = new MailAddress("2012385@itla.edu.do", "To Name");
+            const string fromPassword = "SOFTWARE@14";
+            const string subject = "HOLA MUNDO m";
+            const string body = "Body CUERPO";
+
+            var smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+            };
+            using (var message = new MailMessage(fromAddress, toAddress)
+            {
+                Subject = subject,
+                Body = body
+            })
+            {
+                smtp.Send(message);
+            }
             return View();
         }
 
