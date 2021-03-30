@@ -6,5 +6,6 @@ namespace Theworkspacerd.Web.Helpers
     {
         bool enviarEmailCliente(string Address, string subje, TransacionPaypal data);
         bool enviarEmailEmpresa(string subje, TransacionPaypal data);
+        bool enviarEmail(Mensaje mensaje);
     }
 }

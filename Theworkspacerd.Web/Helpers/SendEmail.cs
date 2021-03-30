@@ -106,6 +106,38 @@ namespace Theworkspacerd.Web.Helpers
             return true;
         }
 
+        public bool enviarEmail(Mensaje mensaje)
+        {
+
+            var fromAddress = new MailAddress(_mailSettings.Mail);
+            var toAddress = new MailAddress(mensaje.Email);
+            string fromPassword = _mailSettings.Password;
+            string subject = $"Comentario de:{mensaje.Nombre}<br/> desde {mensaje.Email}";
+
+
+     
+
+            var smtp = new SmtpClient
+            {
+                Host = _mailSettings.Host,
+                Port = _mailSettings.Port,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+            };
+
+
+            MailMessage mail = new MailMessage();
+            mail.IsBodyHtml = true;
+            mail.Subject = subject;
+            mail.Body =mensaje.Texto ;
+            mail.From = new MailAddress(fromAddress.Address);
+            mail.To.Add(fromAddress.Address);
+            smtp.Send(mail);
+            return true;
+        }
+
     }
 }
 

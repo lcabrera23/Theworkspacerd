@@ -208,7 +208,7 @@ namespace Theworkspacerd.Web.Controllers
                           new Oficinas
                     {
                         id = 11,
-                        precio = 250,
+                        precio = 220,
                         espacio = "Escritorios y puestos trabajo asignados ",
                         tipo = "",
                         oficina = "Espacios Compartidos"
@@ -216,18 +216,42 @@ namespace Theworkspacerd.Web.Controllers
                            new Oficinas
                     {
                         id = 12,
-                        precio = 25,
+                        precio = 20,
                         espacio = "",
                         tipo = "hora",
                         oficina = "SALON REUNIONES"
                     },
-                            new Oficinas
+                     new Oficinas
                     {
                         id = 13,
-                        precio = 60,
+                        precio = 100,
                         espacio = "",
-                        tipo = "mensual",
-                        oficina = "SALON REUNIONES"
+                        tipo = "Basico",
+                        oficina = "Asistente Virtual"
+                    },
+                      new Oficinas
+                    {
+                        id = 14,
+                        precio = 125,
+                        espacio = "",
+                        tipo = "Intermedio",
+                        oficina = "Asistente Virtual"
+                    },
+                     new Oficinas
+                    {
+                        id = 15,
+                        precio = 200,
+                        espacio = "",
+                        tipo = "Completo",
+                        oficina = "Asistente Virtual"
+                    },
+                      new Oficinas
+                    {
+                        id = 16,
+                        precio = 300,
+                        espacio = "",
+                        tipo = "Full",
+                        oficina = "Asistente Virtual"
                     }
 
            };
@@ -245,8 +269,17 @@ namespace Theworkspacerd.Web.Controllers
 
         public IActionResult Contacto()
         {
+            var mensaje = new Mensaje();
+            return View(mensaje);
+        }
 
-            return View();
+        [HttpPost]
+        public IActionResult Contacto(Mensaje mensaje)
+        {
+            _email.enviarEmail(mensaje);
+
+            var newMensaje = new Mensaje();
+            return View(newMensaje);
         }
 
         //Esta accion es para guardar los usuarios que desean saber ofertas

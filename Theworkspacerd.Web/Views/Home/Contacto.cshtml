@@ -1,49 +1,33 @@
-﻿
+﻿@model Theworkspacerd.Web.Models.Mensaje
 @{
     ViewData["Title"] = "Contacto";
 }
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin="" />
-<!-- Make sure you put this AFTER Leaflet's CSS -->
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin=""></script>
-<style>
-    #mapid {
-        height: 500px;
-        margin-bottom:50px;
-    }
-</style>
+
 <h1>ESPACIOS ADECUADOS A TUS NECESIDADES</h1>
 
 <div class="container mt-100">
     <div class="row">
-        @*<div class="col-12 col-md-7">
-                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-69.89852249622346%2C18.50807807525943%2C-69.89144146442415%2C18.51272749763709&amp;layer=mapnik" style="border: 1px solid black"></iframe>
-                <br /><small><a href="https://www.openstreetmap.org/#map=18/18.51040/-69.89498">Ver mapa más grande</a></small>
-            </div>*@
         <div class="col-12 col-md-6">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.427884310603!2d-69.92601958462095!3d18.464267775711626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89e96336a75b%3A0x141898cad9e3799c!2sTorre%20Corporativa%20Bolivar%20195!5e0!3m2!1ses-419!2sdo!4v1617103308487!5m2!1ses-419!2sdo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           
         </div>
         <div class="col-12 col-md-6">
-            <form>
+            <form asp-action="Contacto" asp-controller="Home" method="post">
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        <input asp-for="Email"  class="form-control"   placeholder="Email">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="inputEmail4">Nombre</label>
-                        <input type="text" class="form-control" id="inputEmail4" placeholder="Nombre">
+                        <input asp-for="Nombre"   class="form-control"   placeholder="Nombre">
                     </div>
                 </div>
                 <div class="form-row mb-5">
                     <label for="exampleFormControlTextarea1">Mensaje</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea asp-for="Texto" class="form-control"  rows="3"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary"><i class="far fa-paper-plane"></i> Enviar</button>
