@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using Theworkspacerd.Web.Helpers;
 using Theworkspacerd.Web.Models;
 
 namespace Theworkspacerd.Web.Controllers
@@ -17,17 +19,23 @@ namespace Theworkspacerd.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IConfiguration _configuration;
+        private readonly ISendEmail _email;
 
-        public HomeController(ILogger<HomeController> logger,IConfiguration configuration )
+        public HomeController(ILogger<HomeController> logger,IConfiguration configuration,ISendEmail email)
         {
             _logger = logger;
             _configuration = configuration;
+            _email = email;
         }
 
         public IActionResult Index()
         {
+
+           
             return View();
         }
+
+       
 
         public IActionResult Privacy()
         {
@@ -249,34 +257,25 @@ namespace Theworkspacerd.Web.Controllers
 
 
         //Esta accion enviar un correo al comprador y se le da un codigo de al comprador
-        public IActionResult EnviarCorreo()
+        [HttpPost]
+        public IActionResult EnviarCorreo([FromBody]TransacionPaypal data)
         {
 
-            var fromAddress = new MailAddress("luismiguelcabreragarcia@gmail.com", "Hola mundo 2");
-            var toAddress = new MailAddress("2012385@itla.edu.do", "To Name");
-            const string fromPassword = "SOFTWARE@14";
-            const string subject = "HOLA MUNDO m";
-            const string body = "Body CUERPO";
+          var clineteEmail =  _email.enviarEmailCliente($"{data.Email_address}", $"Información de su estancia: {data.Description}", data);
+          var empresaEmail =  _email.enviarEmailEmpresa($"{data.Description}", data);
 
-            var smtp = new SmtpClient
+            if (clineteEmail == true && empresaEmail == true)
             {
-                Host = "smtp.gmail.com",
-                Port = 587,
-                EnableSsl = true,
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-            };
-            using (var message = new MailMessage(fromAddress, toAddress)
-            {
-                Subject = subject,
-                Body = body
-            })
-            {
-                smtp.Send(message);
+                return Ok(true);
             }
+
             return View();
         }
+
+        public IActionResult CorreosEnviardos(string correo) {
+            @ViewBag.email = correo;
+            return View();
+        } 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

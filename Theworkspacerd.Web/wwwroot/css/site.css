@@ -102,3 +102,9 @@
         margin-right: 0;
     }
 }
+
+.spinner-border {
+    width: 25rem;
+    height: 25rem;
+    font-size:25px;
+}

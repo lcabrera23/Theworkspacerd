@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Theworkspacerd.Web.Helpers;
+using Theworkspacerd.Web.Models;
 
 namespace Theworkspacerd.Web
 {
@@ -23,6 +25,8 @@ namespace Theworkspacerd.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+            services.AddScoped<ISendEmail, SendEmail>();
             services.AddControllersWithViews();
         }
 
