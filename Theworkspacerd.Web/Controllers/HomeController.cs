@@ -184,7 +184,7 @@ namespace Theworkspacerd.Web.Controllers
                        new Oficinas
                     {
                         id = 8,
-                        precio = 100,
+                        precio = 120,
                         espacio = "",
                         tipo = "mensual",
                         oficina = "ESPACIOS ABIERTO"
@@ -192,18 +192,18 @@ namespace Theworkspacerd.Web.Controllers
                         new Oficinas
                     {
                         id = 9,
-                        precio = 33,
+                        precio = 35,
                         espacio = "",
-                        tipo = "semanal",
+                        tipo = "PASADIA",
                         oficina = "ESPACIOS ABIERTO"
                     },
                          new Oficinas
                     {
                         id = 10,
-                        precio = 7,
+                        precio = 60,
                         espacio = "",
-                        tipo = "hora",
-                        oficina = "Oficina Privada"
+                        tipo = "Sabados",
+                        oficina = "ESPACIOS ABIERTO"
                     },
                           new Oficinas
                     {
@@ -252,6 +252,14 @@ namespace Theworkspacerd.Web.Controllers
                         espacio = "",
                         tipo = "Full",
                         oficina = "Asistente Virtual"
+                    },
+                         new Oficinas
+                    {
+                        id = 17,
+                        precio = 100,
+                        espacio = "",
+                        tipo = "Hora",
+                        oficina = "Salón de Eventos"
                     }
 
            };
