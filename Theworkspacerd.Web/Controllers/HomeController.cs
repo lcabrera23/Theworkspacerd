@@ -192,7 +192,7 @@ namespace Theworkspacerd.Web.Controllers
                         new Oficinas
                     {
                         id = 9,
-                        precio = 35,
+                        precio = 20,
                         espacio = "",
                         tipo = "PASADIA",
                         oficina = "ESPACIOS ABIERTO"
