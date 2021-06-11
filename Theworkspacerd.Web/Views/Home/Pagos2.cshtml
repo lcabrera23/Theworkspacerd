@@ -32,7 +32,7 @@
     </div>
 </div>
 
-
+<button type="button" onclick="Enviar()" class="d-none">Enviar</button>
 
 
 @*<script src="https://www.paypal.com/sdk/js?client-id=AePjO0nreSYyzFxR2_F_Mr9Je_VUXJb2W90Jq7VijgEMEjOJeARE6MO_k63tvJoKeVg7j4T2f_4_1cuo&currency=USD" data-sdk-integration-source="button-factory"></script>*@
@@ -41,7 +41,32 @@
 @*<script src="https://www.paypal.com/sdk/js?client-id=AduCg4TQJMRhhTJizTSaEs5t-_l7hyHRh1cvbi1IW3B2EQqgTFw8L4SO4vg_xymZl3IOsPpvQjPCnuYY&components=buttons"></script>*@
 @*<script src="https://www.paypal.com/sdk/js?client-id=AduCg4TQJMRhhTJizTSaEs5t-_l7hyHRh1cvbi1IW3B2EQqgTFw8L4SO4vg_xymZl3IOsPpvQjPCnuYY&currency=USD" data-sdk-integration-source="button-factory"></script>*@
 <script>
+    function Enviar() {
+                    var url = '@Url.Action("EnviarCorreo","Home")';
+                    var data = {
+                        Id: "1",
+                        Email_address:"luismiguelcabreragarcia@gmail.com",
+                        Payer_id:"5",
+                        Status:"true",
+                        Description: "Hola mundo",
+                        Amount: "500",
+                        Currency_code:"$"
 
+                    };
+
+                    fetch(url, {
+                        method: 'POST', // or 'PUT'
+                        body: JSON.stringify(data), // data can be `string` or {object}!
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        }
+                    }).then(res => res.json())
+                        .catch(error => console.error('Error:', error))
+                        .then(response => window.location = `/Home/CorreosEnviardos?correo=${data.Email_address}`)
+
+             
+    }
       const data = @Html.Raw(JsonConvert.SerializeObject(ViewBag.objecto));
       const precio = parseInt(data.precio);
 

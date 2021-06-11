@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="es">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <style>
+        .bono {
+            font-size: 24px;
+            text-align: center;
+            background: #fff;
+            color: #5b5454;
+            font-weight: 600;
+        }
+        
+        .detalle {
+            text-align: center;
+            font-size: 18px;
+            color: #FACD21;
+            background: linear-gradient(#000, #000);
+            padding: 5px;
+            font-weight: 600;
+        }
+        /* img {
+            width: 100%;
+        }*/
+        
+        .ico-whatsapp {
+            background-image: url("http://www.dominicanatours.com/public/img/ico/whatsapp.png");
+        }
+        
+        .ico-instagram {
+            background-image: url("http://www.dominicanatours.com/public/img/ico/instagram.png");
+        }
+        
+        .ico-facebook {
+            background-image: url("http://www.dominicanatours.com/public/img/ico/facebook.png");
+        }
+        
+        .ico-youtube {
+            background-image: url("http://www.dominicanatours.com/public/img/ico/youtube.png");
+        }
+        
+        .footer-social.nav {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-social-icon {
+            width: 64px;
+            height: 64px;
+            background-color: transparent;
+            background-size: 42px 42px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .nav-link {
+            display: block;
+            padding: .5rem 1rem;
+        }
+        
+        .sr-only {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        
+        #siguenos {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        
+        .text-white {
+            color: #fff;
+        }
+        
+        .fuente14 {
+            font-size: 14px;
+        }
+        
+        ul {
+            list-style: none
+        }
+        
+        li {
+            font-size: 16px;
+            padding: 5px;
+        }
+        
+        li::before {
+            content: "\2022";
+            color: rgb(214, 160, 10);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellSpacing="0" cellPadding="0" width="530" border="0" style="font: 12px Verdana, Arial, Helvetica, sans-serif; color:#666;">
+        <tr>
+            <td style="text-align: center;"><img style="width: 290px;" src="https://theworkspacerd.com/images/logo.png"></td>
+        </tr>
+        <tr>
+            <td class="detalle">
+                DETALLES GENERAL DE LA RESERVA
+            </td>
+        </tr>
+        <tr>
+            <td class="font-weight-bold fuente14">
+                <ul>
+                    <li><b>Id_Reserva:</b> $Id$</li>
+                    <li><b>FECHA DE RESERVA:</b> $FechaReserva$</li>
+                    <li><b>Titular de la reserva:</b>$Titular$</li>
+                    <li><b>Descripcion:</b>$Description$</li>
+                    <li><b>Precio de la reserva:</b>$Amount$</li>
+                    <li><b>Tipo de Moneda:</b>$Currency_code$</li>
+                    <li><b>Estado:</b>$Estado$</li>
+                </ul>
+
+            </td>
+        </tr>
+        <tr>
+            <td class="detalle">
+                <a style="color: #FACD21;float: left;margin-left: 7px;" href="https://theworkspacerd.com">theworkspacerd.com</a>
+                <a style="color: #FACD21;float: right; margin-right: 7px;" href="tel:18299544117">1829-954-4117</a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

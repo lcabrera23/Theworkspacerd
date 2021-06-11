@@ -29,11 +29,13 @@ namespace Theworkspacerd.Web.Helpers
              string fromPassword = _mailSettings.Password;
              string subject = subje;
 
+            var webclient = new WebClient();
+            string mailBody = webclient.DownloadString(_mailSettings.RutaEmail);
 
-            string strFileMail = _mailSettings.RutaEmail;
-            StreamReader stream = new StreamReader(strFileMail);
-            string mailBody = stream.ReadToEnd();
-            stream.Close();
+            //string strFileMail = _mailSettings.RutaEmail;
+            //StreamReader stream = new StreamReader(strFileMail);
+            //string mailBody = stream.ReadToEnd();
+            //stream.Close();
 
             mailBody = mailBody.Replace("$Id$", data.Id);
             mailBody = mailBody.Replace("$FechaReserva$", DateTime.Now.ToString("dd/mm/yyyy"));
@@ -72,10 +74,13 @@ namespace Theworkspacerd.Web.Helpers
             string fromPassword = _mailSettings.Password;
             string subject = subje;
 
-            string strFileMail = _mailSettings.RutaEmail;
-            StreamReader stream = new StreamReader(strFileMail);
-            string mailBody = stream.ReadToEnd();
-            stream.Close();
+            //string strFileMail = _mailSettings.RutaEmail;
+            //StreamReader stream = new StreamReader(strFileMail);
+            //string mailBody = stream.ReadToEnd();
+            //stream.Close();
+
+            var webclient = new WebClient();
+            string mailBody = webclient.DownloadString(_mailSettings.RutaEmail);
 
             mailBody = mailBody.Replace("$Id$", data.Id);
             mailBody = mailBody.Replace("$FechaReserva$", DateTime.Now.ToString("dd/mm/yyyy"));
